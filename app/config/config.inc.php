@@ -1,2 +1,2 @@
 <?php
-  define('DEFAULT_MODULE' , "posts");
+  define('DEFAULT_MODULE' , "home");
