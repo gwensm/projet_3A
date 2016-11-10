@@ -1,7 +1,5 @@
 <?php
 //Chargement du model
-//include_once('app/model/posts.php');
-
 class Controller
 {
   public $load;
@@ -15,7 +13,6 @@ class Controller
   }
 
   function index($limite, $offset){
-    $data = "";
     define("PAGE_TITLE", "Page d'attente Pronto !");
     $this->load->view('home', 'home.php', $data);
   }
