@@ -1,10 +1,9 @@
 <?php
 
 //chargement du model
-include_once('../model/pdo.inc.php');
 include_once('../model/contact.php');
 
-var_dump($_POST);
+//var_dump($_POST);
 
 class Controller
 {
@@ -13,7 +12,7 @@ class Controller
 
 	function __construct()
 	{
-		//$this->load = new Load();
+		$this->load = new Load();
 		$this->model = new Model();
 
 		//echo "<pre>";var_dump($this->model);echo "</pre>";
@@ -37,11 +36,9 @@ class Controller
 	function insertData ($email, $name, $job, $message)
 	{
 		$data = $this->model->contact($email, $name, $job, $message);
+		
 		if($data)
 		{
-			/*define("PAGE_TITLE", "Liste articles");
-			$data = "test data";
-			$this->load->view('posts', 'index.php', $data);*/
 			echo "tutobene";
 		}
 		else
