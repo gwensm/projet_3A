@@ -14,7 +14,11 @@ class Controller
 
   function index($limite, $offset){
     define("PAGE_TITLE", "Page d'attente Pronto !");
-    $this->load->view('home', 'home.php', $data);
+    if (isset($data)) {
+      $this->load->view('home', 'home.php', $data);
+    } else {
+      $this->load->view('home', 'home.php');
+    }
   }
 
 }
