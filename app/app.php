@@ -1,6 +1,6 @@
 <?php
   //Chargement du moteur d'affichage
-  include_once('core/load.php');
+  //include_once('core/load.php');
 
   //Récupération du paramètre de l'url
   if (!isset($_GET['module'])){

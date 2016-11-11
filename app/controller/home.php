@@ -2,15 +2,12 @@
 //Chargement du model
 include_once('app/model/home.php');
 
-class Controller
+class Controller extends appController
 {
-  public $load;
-  public $model;
 
   function __construct()
   {
-    $this->load = new Load();
-    
+    parent::__construct();
     // include du model
     $this->model = new Model();
 
@@ -41,7 +38,7 @@ class Controller
   {
     //on appelle la methode contact dans du model
     $data = $this->model->contact($email, $name, $job, $message);
-    
+
     // si return true on passe la notif ok dans l'url
     if($data)
     {
