@@ -10,8 +10,11 @@ class Controller
   function __construct()
   {
     $this->load = new Load();
+    
+    // include du model
     $this->model = new Model();
 
+    // si on est sur le module = home et qu'on reçoit un POST
     if (isset($_POST['email']))
     {
       $email = $_POST["email"];
@@ -19,6 +22,7 @@ class Controller
       $job = $_POST["job"];
       $message = $_POST["message"];
 
+      // appel de la methode insertData
       $this->insertData($email, $name, $job, $message);
     }
     else
@@ -35,16 +39,17 @@ class Controller
 
   function insertData ($email, $name, $job, $message)
   {
+    //on appelle la methode contact dans du model
     $data = $this->model->contact($email, $name, $job, $message);
     
+    // si return true on passe la notif ok dans l'url
     if($data)
     {
-      return "ma notif de la mort qui tue";
-      $this->load->view('home', 'home.php');
+      header("Location:?module=home&not=ok");
     }
     else
     {
-      echo "tutomala";
+      header("Location:?module=home&not=nok");
     }
   }
 
