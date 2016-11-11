@@ -29,8 +29,8 @@
 				<p class="text-center light-weight margin-top-10 margin-bottom-5">N’en perdez pas une miette, inscrivez-vous à notre newsletter !</p>
 				<form class="form-inline text-center">
 					<div class="form-group col-lg-4 col-lg-offset-3 col-md-4 col-md-offset-3 col-sm-6 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-						<label class="sr-only " for="exampleInputEmail3">Email address</label>
-						<input type="email" class="myform-control" id="exampleInputEmail3" placeholder="Entrez votre adresse mail">
+						<label class="sr-only " for="emailNewsletter">Email address</label>
+						<input type="email" class="myform-control" id="emailNewsletter" name="newsletter" placeholder="Entrez votre adresse mail">
 					</div>
 					<button type="submit" class="btn btn-green col-lg-2 col-md-2 col-sm-4 col-xs-8 hidden-xs">Abonnez vous</button>
 					<button type="submit" class="btn btn-green col-lg-2 col-md-2 col-sm-3 col-xs-4 col-xs-offset-4 hidden-lg hidden-md hidden-sm">Abonnez vous</button>
