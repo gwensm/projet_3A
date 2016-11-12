@@ -1,11 +1,12 @@
 @media screen and (max-width: 640px) {
   .base-line {
     font-size: 22px!important;
-    
+
   }
 
   .arrow-down{
     margin-top: 10%;
+    cursor: pointer;
   }
 
 
@@ -15,7 +16,7 @@
 @media screen and (max-width: 1200px) {
   .arrow-down {
     margin-top: 3%;
-    
+    cursor: pointer;
   }
 
 

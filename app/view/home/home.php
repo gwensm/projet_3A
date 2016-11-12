@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title> <?php echo PAGE_TITLE ; ?></title>
 	<link rel="stylesheet" href="assets/css/monstyle.css">
+	<script type='text/javascript' src='assets/js/jquery.js'></script>
+	<script type='text/javascript' src='assets/js/monscript.js'></script>
 	<link rel="stylesheet" href="assets/css/font.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/mixins.css">
@@ -49,12 +51,12 @@
 		</div>
 	</div>
 	<div class="row text-center">
-		<img src="assets/img/down-arrow.png" class="text-center arrow-down" width="18px">
+		<img src="assets/img/down-arrow.png" class="text-center arrow-down" width="30px" id="arrow">
 	</div>
 	<form name="form_post" method="post" action="?module=home">
 		<div class="row">
 			<hr class="visible-xs visible-sm visible-lg visible-md margin-top-5">
-			<h3 class="text-center light-weight col-xs-10 col-xs-offset-1 margin-bottom-5"> Vous avez une question ? Envoyez nous un message!<h3>
+			<h3 class="text-center light-weight col-xs-10 col-xs-offset-1 margin-bottom-5" id="news"> Vous avez une question ? Envoyez nous un message!<h3>
 				<div class="form-group col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12">
 					<label class="sr-only" for="exampleInputEmail3" >E-mail</label>
 					<input type="email" class="myform-control" id="exampleInputEmail3" name="email" placeholder="Votre adresse mail">
