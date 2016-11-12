@@ -27,14 +27,24 @@
 			<h3 class="text-center light-weight padding-all-5 base-line col-xs-12">Gérez vos <span class="my-green">stocks</span>, vos <span class="my-green">coûts</span>, vos <span class="my-green">recettes</span> en tout simplicité grâce à Pronto ! Plus d’informations à venir bientôt !</h3>
 			<div class="form-waiting-page">
 				<p class="text-center light-weight margin-top-10 margin-bottom-5">N’en perdez pas une miette, inscrivez-vous à notre newsletter !</p>
-				<form class="form-inline text-center">
+				<form class="form-inline text-center" method="POST">
 					<div class="form-group col-lg-4 col-lg-offset-3 col-md-4 col-md-offset-3 col-sm-6 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 						<label class="sr-only " for="emailNewsletter">Email address</label>
-						<input type="email" class="myform-control" id="emailNewsletter" name="newsletter" placeholder="Entrez votre adresse mail">
+						<input type="email" required class="myform-control" id="emailNewsletter" name="newsletter_mail" placeholder="Entrez votre adresse mail">
+						<small class="text-danger"><?php echo isset($msg_error) ? $msg_error: ''; ?></small>
 					</div>
+
 					<button type="submit" class="btn btn-green col-lg-2 col-md-2 col-sm-4 col-xs-8 hidden-xs">Abonnez vous</button>
 					<button type="submit" class="btn btn-green col-lg-2 col-md-2 col-sm-3 col-xs-4 col-xs-offset-4 hidden-lg hidden-md hidden-sm">Abonnez vous</button>
 				</form>
+				<div class="clearfix"></div>
+				<?php if(isset($_GET['newsletter'])) { ?>
+						<?php if($_GET['newsletter'] == 'true') { ?>
+							<div class="my-green text-center margin-top-5">
+								Vous êtes désormais inscrit à notre newsletter, vous recevrez très bientôt un email de confirmation
+							</div>
+						<?php } ?>
+					<?php } ?>
 			</div>
 		</div>
 	</div>
