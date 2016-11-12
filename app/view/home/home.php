@@ -35,7 +35,7 @@
 				echo '</div>';
 			}
 		}
-		else if(isset($_GET["contact"])){
+		else if(isset($_GET["newsletter"])){
 			if($_GET["newsletter"] == "ok"){
 				echo '<div class="alert alert-success">';
 				echo '<strong>Bravo!</strong> Vous avez été correctement inscrit à la newsletter';
