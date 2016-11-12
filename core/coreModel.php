@@ -7,8 +7,8 @@
       try
       {
         $dns = 'mysql:host=localhost;dbname=angehrn';
-        $utilisateur = 'angehrn';
-        $motDePasse = '85715';
+        $utilisateur = 'root';
+        $motDePasse = 'root';
 
         $option = array(
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
