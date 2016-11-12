@@ -6,7 +6,7 @@
     {
       try
       {
-        $dns = 'mysql:host=angehrn;dbname=angehrn';
+        $dns = 'mysql:host=localhost;dbname=angehrn';
         $utilisateur = 'angehrn';
         $motDePasse = '85715';
 
