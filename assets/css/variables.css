@@ -1,0 +1,58 @@
+.btn-green {
+  color: #ffffff;
+  background-color: #27b399;
+  border-color: #27b399;
+  height: 50px;
+}
+.btn-green:focus,
+.btn-green.focus {
+  color: #ffffff;
+  background-color:#1f806e;
+  border-color: #27b399;
+}
+.btn-green:hover {
+  color: #ffffff;
+  background-color: #27b399;
+  border-color: #27b399;
+}
+.btn-green:active,
+.btn-green.active,
+.open > .dropdown-toggle.btn-green {
+  color: #ffffff;
+  background-color:#1f806e;
+  border-color: #27b399;
+}
+.btn-green:active:hover,
+.btn-green.active:hover,
+.open > .dropdown-toggle.btn-green:hover,
+.btn-green:active:focus,
+.btn-green.active:focus,
+.open > .dropdown-toggle.btn-green:focus,
+.btn-green:active.focus,
+.btn-green.active.focus,
+.open > .dropdown-toggle.btn-green.focus {
+  color: #ffffff;
+  background-color: #1f806e;
+  border-color: #27b399;
+}
+.btn-green:active,
+.btn-green.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-green.disabled:hover,
+.btn-green[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-green.disabled:focus,
+.btn-green[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-green.disabled.focus,
+.btn-green[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: #337ab7;
+  border-color: #27b399;
+}
+.btn-green .badge {
+  color: #337ab7;
+  background-color: #ffffff;
+}

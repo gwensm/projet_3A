@@ -1,4 +1,5 @@
 <?php
+require "lib/mail.class.php";
 //Chargement du model
 include_once('app/model/home.php');
 
@@ -19,13 +20,18 @@ class Controller extends appController
       $job = $_POST["job"];
       $message = $_POST["message"];
 
-      // appel de la methode insertData
-      $this->insertData($email, $name, $job, $message);
+      // appel de la methode insertContact
+      $this->insertContact($email, $name, $job, $message);
     }
-    else
-    {
+    else if(isset($_POST['newsletter_mail'])){
+      $email = $_POST['newsletter_mail'];
+
+      $this->insertNewsletter($email);
+    }
+    else{
       $this->index(0,5);
     }
+
   }
 
   function index($limite, $offset)
@@ -34,7 +40,7 @@ class Controller extends appController
     $this->load->view('home', 'home.php');
   }
 
-  function insertData ($email, $name, $job, $message)
+  function insertContact ($email, $name, $job, $message)
   {
     //on appelle la methode contact dans du model
     $data = $this->model->contact($email, $name, $job, $message);
@@ -42,12 +48,32 @@ class Controller extends appController
     // si return true on passe la notif ok dans l'url
     if($data)
     {
-      header("Location:?module=home&not=ok");
+      header("Location:?module=home&contact=ok");
     }
     else
     {
-      header("Location:?module=home&not=nok");
+      header("Location:?module=home&contact=nok");
     }
   }
+  function insertNewsletter ($email){
 
+      try {
+        $mail_obj = new Mail('sharon.colin@eemi.com', 'Pronto', 'sharon.colin@eemi.com');
+        $mail_obj->ajouter_destinataire($email);
+        $mail_obj->contenu('Newsletter Pronto','','<p>Vous êtes bien inscris à la <strong>newsletter</strong></p>');
+        if($mail_obj->envoyer()){
+          require 'app/model/newsletter.php';
+          $newsletter_obj = new Newsletter();
+          $newsletter_obj->saveNewsletterMail($email);
+          if($newsletter_obj){
+            header('location: index.php?module=home&newsletter=ok');
+          }else{
+            header('location: index.php?module=home&newsletter=nok');
+          }
+        }
+      } catch (Exception $e) {
+        header('location: index.php?module=home&newsletter=nok');
+      }
+
+    }
 }
