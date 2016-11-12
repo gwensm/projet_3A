@@ -22,6 +22,32 @@
 <body>
 <div class="container-fluid">
 	<div class="row">
+		<?php
+		if(isset($_GET["contact"])){
+			if($_GET["contact"] == "ok"){
+				echo '<div class="alert alert-success">';
+				echo '<strong>Bravo!</strong> Votre message a été correctement envoyé ';
+				echo '</div>';
+			}
+			else{
+				echo '<div class="alert alert-danger">';
+				echo '<strong>Problème!</strong> Votre message n\'a pas été correctement envoyé ';
+				echo '</div>';
+			}
+		}
+		else if(isset($_GET["contact"])){
+			if($_GET["newsletter"] == "ok"){
+				echo '<div class="alert alert-success">';
+				echo '<strong>Bravo!</strong> Vous avez été correctement inscrit à la newsletter';
+				echo '</div>';
+			}
+			else{
+				echo '<div class="alert alert-danger">';
+				echo '<strong>Problème!</strong> Vous n\'avez pas été inscrit correctement à la newsletter';
+				echo '</div>';
+			}
+		}
+		?>
 		<img  class="col-lg-3 col-md-3 col-sm-3 hidden-xs img-style-2 margin-top-5" src="assets/img/plat-page-one.jpg" alt="image-plat-pronto">
 		<div class="col-lg-8 col-md-9 col-sm-8 col-xs-12 margin-top-5">
 			<p id="logo" class="text-center margin-top-5">Pronto!</p>

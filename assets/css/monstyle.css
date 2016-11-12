@@ -9,7 +9,10 @@
     cursor: pointer;
   }
 
-
+  .alert{
+    width: 100% !important;
+    margin:auto !important;
+  }
 }
 
 
@@ -18,7 +21,10 @@
     margin-top: 3%;
     cursor: pointer;
   }
-
+  .alert{
+    width: 80%;
+    margin:auto;
+  }
 
 }
 
