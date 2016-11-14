@@ -301,7 +301,7 @@ class Controller extends appController
                                          <tr>
                                             <td valign="middle" width="100%" style="padding: 10px 0 10px 20px;" class="logo">
                                                <div class="imgpop" align="center">
-                                                  <a href="http://angehrn.etudiant-eemi.com/perso/projet_3A/"><img src="http://dayane.etudiant-eemi.com/doc-pronto/logo.png" border="0" alt="logo-pronto" width="27%rr"> </a>
+                                                  <a href="http://angehrn.etudiant-eemi.com/perso/projet_3A/"><img src="http://angehrn.etudiant-eemi.com/perso/projet_3A/assets/img/logo.png" border="0" alt="logo-pronto" width="27%rr"> </a>
                                                </div>
                                             </td>
                                          </tr>
